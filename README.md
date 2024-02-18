@@ -2,16 +2,13 @@
 
 Different experiments with [NestJS](https://nestjs.com/) framework.
 
+## Requirements
+
+- Node.js 18
+- Visual Studio Code with [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ## How to Run It
 
-### Visual Studio Code
-
-You need Visual Studio Code with [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extension installed.
-
-Run the following command in CLI: `npm run start:debug` and press F5.
-
-### CLI
-
-```powershell
-npm run start:dev
-```
+1. Create `.env.development.local` configuration file based on `.env.development`.
+2. Install dependencies: `npm install`.
+3. Run the application: `npm run start:debug` and press F5.
