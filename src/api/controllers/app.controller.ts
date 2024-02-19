@@ -1,13 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { IsHealthyRequestDto } from '../models/is-healthy-request.dto';
-import { GetTemplateVersionHandler } from 'src/core/queries/get-template-version/get-template-version.handler';
+import { IsHealthyRequestDto as IsHealthyResponseDto } from '../models/is-healthy-response.dto';
 
 @Controller()
 export class AppController {
-  constructor(private getTemplateVersionHandler: GetTemplateVersionHandler) {}
-
   @Get()
-  isHealthy(): IsHealthyRequestDto {
+  isHealthy(): IsHealthyResponseDto {
     return {
       healthy: true,
     };

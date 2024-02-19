@@ -5,6 +5,7 @@ import { TemplateVersionController } from './controllers/template-version.contro
 import { APP_FILTER } from '@nestjs/core';
 import { ValidationErrorFilter } from './errors-handling/validation-error.filter';
 import { ConfigModule } from '@nestjs/config';
+import { FileController } from './controllers/file.controller';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { ConfigModule } from '@nestjs/config';
       envFilePath: ['.env.development.local', '.env.development'],
     }),
   ],
-  controllers: [AppController, TemplateVersionController],
+  controllers: [AppController, TemplateVersionController, FileController],
   providers: [
     {
       provide: APP_FILTER,
